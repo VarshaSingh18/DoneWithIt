@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet,SafeAreaView, Button, Alert } from 'react-native';
-import { wView } from 'react-native-web';
+import { StyleSheet,SafeAreaView, Button, Alert, Platform } from 'react-native';
+import { View } from 'react-native-web';
 
 export default function App() {
   console.log(require("./assets/favicon.png"));
@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: Platform.OS=== "android" ? StatusBar.currentHeight : 0
   },
 });
