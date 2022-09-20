@@ -6,16 +6,17 @@ import { StyleSheet,
          Dimensions,
           View} from 'react-native';
 
+import {useDimensions,useDeviceOrientation } from '@react-native-community/hooks';
 
 export default function App() {
-  console.log(Dimensions.get("screen"));
+  const { landscape }=useDeviceOrientation();
   return (
     <SafeAreaView style={styles.container}>
       <View 
       style={{
        backgroundColor : "dodgerblue",
-       width : "50%",
-       height : 70
+       width : "100%",
+       height : landscape ? '100%' : '30%'
       }}
       >
 
@@ -31,3 +32,5 @@ const styles = StyleSheet.create({
     paddingTop: Platform.OS=== "android" ? StatusBar.currentHeight : 0
   },
 });
+
+/*In portrait mode you wanna have this video player on top, In landscape you wanna to this entire screen */
