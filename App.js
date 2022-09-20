@@ -1,15 +1,25 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet,SafeAreaView, Button, Alert, Platform } from 'react-native';
-import { View } from 'react-native-web';
+import { StyleSheet,
+         SafeAreaView,
+         Platform, 
+         Dimensions,
+          View} from 'react-native';
+
 
 export default function App() {
-  console.log(require("./assets/favicon.png"));
+  console.log(Dimensions.get("screen"));
   return (
     <SafeAreaView style={styles.container}>
-      <Button title="Click me" onPress={()=>{
-        Alert.prompt("My title","My Message",(text)=> console.log(text) )
-      }}/>
+      <View 
+      style={{
+       backgroundColor : "dodgerblue",
+       width : "50%",
+       height : 70
+      }}
+      >
+
+      </View>
     </SafeAreaView>
   );
 }
