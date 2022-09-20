@@ -8,10 +8,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <Button title="Click me" onPress={()=>{
-        Alert.alert("My Title", "My Message", [
-          {text: "Yes", onPress:()=>{console.log("Yes")}},
-          {text: "No", onPress:()=>{console.log("No")}}
-        ])
+        Alert.prompt("My title","My Message",(text)=> console.log(text) )
       }}/>
     </SafeAreaView>
   );
