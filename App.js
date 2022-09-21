@@ -7,12 +7,15 @@ export default function App() {
    <View style={{
      backgroundColor : "#fff",
      flex: 1,
-     flexDirection: "row-reverse"
+     flexDirection: "row-reverse",//horizontal
+     justifyContent: "center",  //main
+     alignItems: "center" // verticle
    }}>
        <View style ={{
          backgroundColor: "gold",
          width:100,
-         height:100
+         height:100,
+         alignSelf: "flex-start"
        }}/>
 
        <View style ={{
