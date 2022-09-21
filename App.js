@@ -9,13 +9,14 @@ export default function App() {
      flex: 1,
      flexDirection: "row-reverse",//horizontal
      justifyContent: "center",  //main
-     alignItems: "center" // verticle
+     alignItems: "center", // verticle
+     alignContent:"center",
+     flexwrap: "wrap"
    }}>
        <View style ={{
          backgroundColor: "gold",
          width:100,
          height:100,
-         alignSelf: "flex-start"
        }}/>
 
        <View style ={{
@@ -25,6 +26,11 @@ export default function App() {
        }}/>
        <View style ={{
          backgroundColor: "tomato",
+         width:100,
+         height:100
+       }}/>
+       <View style ={{
+         backgroundColor: "green",
          width:100,
          height:100
        }}/>
