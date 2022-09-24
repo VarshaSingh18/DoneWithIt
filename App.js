@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View,Text} from 'react-native';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 
@@ -11,30 +11,18 @@ export default function App() {
     flex:1,
     justifyContent:"center",
     alignItems: "center"
-  }}
-  >
-    <View style={{
-      backgroundColor: "dodgerblue",
-      width:100,
-      height:100,
-      padding:20,
-      paddingHorizontal:10,
-      paddingLeft:30,
-    }}>
-      <View style={{
-        backgroundColor:"gold",
-        height:50,
-        width:50
-      }}></View>
-      </View>
-      <View style={{
-        backgroundColor:"tomato",
-        width:100,
-        height:100,
-        margin:20
-      }}>
-
-      </View>
+  }}>
+    <Text style={{
+     //fontfamily: "Roboto" (not supported same in both ios and andrioid)
+     fontSize:30,
+     fontStyle:"italic",
+     fontWeight: "800",    //"bold"
+     color:"tomato",
+     textTransform:"capitalize",
+     //textDecorationLine:"line-through"
+     textAlign:"center",
+     lineHeight:60
+      }}>I love react native, This is my My first react native app. Here's some more texts.</Text>
     </View>
   );
 
