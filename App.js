@@ -1,7 +1,6 @@
 import React from 'react';
 import {View,Text} from 'react-native';
-import AppTest from './app/components/AppTest';
-import {MaterialCommunityIcons} from '@expo/vector-icons';
+import AppButton from './app/components/AppButton';
 
 export default function App() {
 
@@ -12,8 +11,7 @@ export default function App() {
     justifyContent:"center",
     alignItems: "center"
   }}>
-    <AppTest>I love react native </AppTest>
-    <MaterialCommunityIcons name="email" size={200} color="dodgerblue"/>
+    <AppButton title="Login" onPress={()=>console.log("Tapped")}></AppButton>
     </View>
   );
 
