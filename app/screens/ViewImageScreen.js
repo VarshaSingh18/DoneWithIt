@@ -8,6 +8,7 @@ function ViewImageScreen(props) {
         <View style={styles.container}>
         <View style={styles.closeIcon}>
             <MaterialCommunityIcons name="close" color="white" size={35}/>
+            
         </View>
 
         <View style={styles.deleteIcon}>
